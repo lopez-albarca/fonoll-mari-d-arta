@@ -62,7 +62,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   width: 230px;
   height: 65px;
   object-fit: cover;
-  object-position: 50% 53%;
+  object-position: center 58%;
+  filter: brightness(0) invert(1);
 }
 .nav-links { display: flex; align-items: center; gap: 1.45rem; }
 .nav-links a { font-size: .84rem; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
@@ -102,9 +103,7 @@ h3 { font-size: 1.7rem; }
 .button:hover { filter: brightness(.94); transform: translateY(-1px); }
 .button.secondary { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.08); backdrop-filter: blur(8px); }
 .button.dark { background: var(--forest-dark); }
-.hero-facts { display: flex; flex-wrap: wrap; gap: 1.3rem 2.4rem; margin: 3.6rem 0 0; padding: 1.4rem 0 0; border-top: 1px solid rgba(255,255,255,.3); }
-.hero-facts span { display: block; font-size: .75rem; color: rgba(255,255,255,.68); letter-spacing: .1em; text-transform: uppercase; }
-.hero-facts strong { font-family: var(--serif); font-size: 1.15rem; font-weight: 400; }
+.hero-note { margin: 3rem 0 0; color: rgba(255,255,255,.72); font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; }
 
 .section { padding: clamp(5rem, 9vw, 9rem) 0; }
 .section.paper { background: var(--paper); }
@@ -118,6 +117,7 @@ h3 { font-size: 1.7rem; }
 .photo-stack .photo-small { right: 0; bottom: 0; width: 48%; height: 44%; border: .65rem solid var(--paper); }
 
 .section-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: end; margin-bottom: 3rem; }
+.section-heading h2::after { content: ""; display: inline-block; width: 42px; height: 42px; margin-left: .45rem; background: url("images/fonoll.png") center / contain no-repeat; opacity: .36; vertical-align: -.15em; }
 .section-heading p { max-width: 550px; margin: 0; color: #607067; }
 .dark .section-heading p { color: rgba(255,255,255,.68); }
 .dish-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
@@ -167,6 +167,14 @@ h3 { font-size: 1.7rem; }
 .consent p { margin: 0 0 1rem; font-size: .86rem; }
 .consent-actions { display: flex; gap: .5rem; }
 
+.action-page { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; padding: 7rem 1rem 3rem; color: white; background: linear-gradient(rgba(12,29,22,.76), rgba(12,29,22,.84)), url("images/interior-terraza.webp") center / cover; }
+.action-card { width: 100%; max-width: 660px; min-width: 0; overflow: hidden; padding: clamp(2rem, 7vw, 4.5rem); text-align: center; background: rgba(21,50,38,.93); box-shadow: var(--shadow); }
+.action-card .action-mark { width: 54px; margin: 0 auto 1.25rem; filter: brightness(0) invert(1); opacity: .75; }
+.action-card h1 { max-width: 100%; font-size: clamp(2.25rem, 8vw, 5rem); overflow-wrap: anywhere; }
+.action-card p { max-width: 520px; margin: 1.25rem auto 2rem; color: rgba(255,255,255,.78); overflow-wrap: anywhere; }
+.action-card .button-row { justify-content: center; }
+.action-back { display: inline-block; margin-top: 1.5rem; color: rgba(255,255,255,.72); font-size: .82rem; }
+
 @media (max-width: 900px) {
   .nav { height: 74px; }
   .brand-logo { width: 180px; height: 52px; }
@@ -190,8 +198,6 @@ h3 { font-size: 1.7rem; }
   .hero-lead { min-width: 0; font-size: 1rem; overflow-wrap: anywhere; }
   .hero .button-row { display: grid; grid-template-columns: 1fr; }
   .hero .button { width: 100%; }
-  .hero-facts { gap: 1rem; }
-  .hero-facts div { width: 100%; }
   .section { padding: 4.8rem 0; }
   .photo-stack { min-height: 390px; }
   .dish-grid, .menu-columns, .visit-details { grid-template-columns: 1fr; }
