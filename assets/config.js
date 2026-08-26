@@ -1,4 +1,4 @@
 window.FONOLL_CONFIG = {
-  preview: true,
-  gaMeasurementId: ""
+  preview: false,
+  gaMeasurementId: "G-3SRXSC1ZK1"
 };
