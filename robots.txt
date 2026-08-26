@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# Preview: indexing will be enabled when the production domain is connected.
