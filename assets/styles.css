@@ -150,9 +150,10 @@ h3 { font-size: 1.7rem; }
 .visit-copy p { color: rgba(255,255,255,.72); }
 .visit-details { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2.2rem 0; }
 .visit-details span { display: block; color: #d9bd8b; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
-.visit-details a { text-decoration: none; }
-.visit-image { min-height: 590px; }
-.visit-image img { height: 100%; object-fit: cover; }
+.visit-details a { text-decoration: underline; text-decoration-color: rgba(255,255,255,.45); text-underline-offset: .2em; transition: color .2s ease, text-decoration-color .2s ease; }
+.visit-details a:hover, .visit-details a:focus-visible { color: #d9bd8b; text-decoration-color: currentColor; }
+.visit-image { height: 590px; min-height: 0; overflow: hidden; }
+.visit-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 38%; }
 
 .site-footer { padding: 3rem 0 6rem; background: #0e251b; color: rgba(255,255,255,.72); }
 .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: end; }
@@ -189,6 +190,7 @@ h3 { font-size: 1.7rem; }
   .menu-shell { grid-template-columns: 1fr; }
   .menu-aside { position: static; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .visit-image { height: 480px; }
 }
 
 @media (max-width: 620px) {
@@ -204,7 +206,7 @@ h3 { font-size: 1.7rem; }
   .dish-card, .dish-card img { min-height: 360px; }
   .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 190px; }
   .gallery-grid .wide { grid-column: span 2; }
-  .visit-image { min-height: 360px; }
+  .visit-image { height: 340px; }
   .footer-grid { grid-template-columns: 1fr; }
   .floating-actions { position: fixed; z-index: 45; inset: auto .65rem .65rem; display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }
   .floating-actions a { min-height: 48px; border-radius: 999px; display: grid; place-items: center; background: var(--coral); color: white; box-shadow: 0 10px 28px rgba(0,0,0,.24); font-size: .76rem; font-weight: 800; text-decoration: none; text-transform: uppercase; }
